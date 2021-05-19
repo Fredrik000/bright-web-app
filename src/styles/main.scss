@@ -1,4 +1,5 @@
 @import 'config';
+@import 'card';
 
 * {
   box-sizing: border-box;
@@ -9,7 +10,7 @@
 html body {
   height: 100vh;
   width: 100%;
-  background-color: #333;
+  background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

@@ -1,9 +1,13 @@
 // Variables
-$primary-color: #444;
+$primary-color: #174a5b;
 
 // Mixins
 @mixin easeOut {
   transition: all 0.3s ease-out;
+}
+
+@mixin btnHover {
+  background-color: darken($primary-color, 10);
 }
 
 // Media Query Mixins
