@@ -67,6 +67,45 @@
 .login-form > h1,
 .login-form > p {
   grid-column: span 2;
+  
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  width: 700px;
+  height: 700px;
+  color: #174a5b;
+  border: 2px solid #174a5b;
+  border-radius: 10px;
+}
+
+.card h2 {
+  font-size: 48px;
+}
+
+.card p {
+  font-size: 24px;
+}
+
+.card button {
+  width: 400px;
+  height: 70px;
+  color: white;
+  background-color: #174a5b;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.card button:hover {
+  background-color: #0d2932;
 }
 
 * {
