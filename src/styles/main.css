@@ -35,7 +35,7 @@
   border-radius: 10px;
 }
 
-.login-form {
+.login {
   width: 600px;
   height: 600px;
   display: -ms-grid;
@@ -49,45 +49,45 @@
       align-content: center;
 }
 
-.login-form button,
-.login-form input,
-.login-form h1,
-.login-form p {
+.login button,
+.login input,
+.login h1,
+.login p {
   grid-column: gStart;
   grid-row: auto;
 }
 
-.login-form button {
+.login button {
   grid-column: span 1;
 }
 
-.login-form input {
+.login input {
   grid-column: span 3;
 }
 
-.login-form h1,
-.login-form p {
+.login h1,
+.login p {
   grid-column: span 2;
 }
 
-.login-form input,
-.login-form h1,
-.login-form p {
+.login input,
+.login h1,
+.login p {
   color: #174a5b;
 }
 
-.login-form p {
+.login p {
   margin-bottom: 25px;
 }
 
-.login-form input,
-.login-form button {
+.login input,
+.login button {
   border: 2px solid #174a5b;
   border-radius: 5px;
   padding: 10px;
 }
 
-.login-form button {
+.login button {
   background-color: #174a5b;
   color: white;
 }

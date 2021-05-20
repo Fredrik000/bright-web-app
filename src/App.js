@@ -1,16 +1,14 @@
 import React from 'react';
 import Navbar from 'Components/Navbar';
-import Modal from 'Components/UI/Modal';
-import LoginForm from 'Components/LoginForm';
+import Login from 'Components/Login';
 import Subject from 'Components/Subject';
 import Form from 'Components/Form';
 
 function App() {
   return (
     <>
-      <Modal />
       <Navbar />
-      <LoginForm />
+      <Login />
       <Subject />
       <Form />
     </>
