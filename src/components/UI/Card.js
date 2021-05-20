@@ -1,13 +1,10 @@
 import React from 'react';
 
-function Card() {
+function Card(props) {
   return (
-    <div className='card'>
-      <div>
-        <h2>Heading</h2>
-        <p>Small explantation detaling what this is for </p>
-      </div>
-      <button>Start</button>
+    <div className={`card ${props.className}`}>
+      {props.children}
+      <button onClick={props.onStartClick}>Start</button>
     </div>
   );
 }

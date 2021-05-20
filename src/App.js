@@ -1,17 +1,19 @@
 import React from 'react';
-import Navbar from 'components/Navbar';
-import LoginForm from 'components/LoginForm';
-import Card from 'components/UI/Card';
-import Form from 'components/Form';
+import Navbar from 'Components/Navbar';
+import Modal from 'Components/UI/Modal';
+import LoginForm from 'Components/LoginForm';
+import Subject from 'Components/Subject';
+import Form from 'Components/Form';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
+      <Modal />
       <Navbar />
       <LoginForm />
-      <Card />
+      <Subject />
       <Form />
-    </React.Fragment>
+    </>
   );
 }
 export default App;

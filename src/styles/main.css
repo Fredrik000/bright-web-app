@@ -3,13 +3,36 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background-color: #174A5B;
+  background-color: #174a5b;
 }
 
 .navbar-img {
   width: 100px;
-  height: 50px;
-  margin: 50px;
+  height: auto;
+  margin: 40px;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.modal {
+  position: fixed;
+  background-color: white;
+  top: 25vh;
+  left: 25%;
+  width: 50%;
+  min-height: 200px;
+  max-height: 580px;
+  z-index: 100;
+  border: 2px solid #174a5b;
+  border-radius: 10px;
 }
 
 .login-form {
@@ -26,48 +49,49 @@
       align-content: center;
 }
 
-.login-form > input,
-.login-form > h1,
-.login-form > p {
-  color: #174A5B;
-}
-
-.login-form > p {
-  margin-bottom: 25px;
-}
-
-.login-form > input,
-.login-form > button {
-  border: 2px solid #174A5B;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.login-form > button {
-  background-color: #174A5B;
-  color: white;
-}
-
-.login-form > button,
-.login-form > input,
-.login-form > h1,
-.login-form > p {
+.login-form button,
+.login-form input,
+.login-form h1,
+.login-form p {
   grid-column: gStart;
   grid-row: auto;
 }
 
-.login-form > button {
+.login-form button {
   grid-column: span 1;
 }
 
-.login-form > input {
+.login-form input {
   grid-column: span 3;
 }
 
-.login-form > h1,
-.login-form > p {
+.login-form h1,
+.login-form p {
   grid-column: span 2;
-  
+}
+
+.login-form input,
+.login-form h1,
+.login-form p {
+  color: #174a5b;
+}
+
+.login-form p {
+  margin-bottom: 25px;
+}
+
+.login-form input,
+.login-form button {
+  border: 2px solid #174a5b;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.login-form button {
+  background-color: #174a5b;
+  color: white;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,26 +110,27 @@
   border-radius: 10px;
 }
 
-.card h2 {
-  font-size: 48px;
-}
-
-.card p {
-  font-size: 24px;
-}
-
 .card button {
-  width: 400px;
-  height: 70px;
+  width: 500px;
+  height: 60px;
   color: white;
   background-color: #174a5b;
   border-radius: 5px;
+  font-size: 24px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .card button:hover {
   background-color: #0d2932;
+}
+
+.subject h2 {
+  font-size: 48px;
+}
+
+.subject p {
+  font-size: 24px;
 }
 
 * {
