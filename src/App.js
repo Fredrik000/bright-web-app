@@ -1,19 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Card from 'components/UI/Card';
-import Form from 'components/Form';
-
-function App() {
-    return (
-        <>
-            <Card />
-            <Form />
-        </>
-    );
-}
-
-export default App;
-=======
 import { Route } from 'react-router-dom';
 import Navbar from 'Components/Navbar';
 import Login from 'Components/Login';
@@ -46,4 +31,3 @@ function App() {
   );
 }
 export default App;
->>>>>>> master
