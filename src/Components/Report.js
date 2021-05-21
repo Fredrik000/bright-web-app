@@ -5,24 +5,29 @@ function Form() {
     <div className='report-form'>
       <h1>Repair</h1>
       <p>Small explantation detaling what this is for</p>
-      <form>
+
+        <form>
         <div>
           <label htmlFor='name'></label>
-          <input type='text' id='name' />
+          <input type='text' placeholder='Your name' id='name' />
         </div>
         <div>
           <label htmlFor='product'></label>
-          <select id='product' />
+          <select id='product' >
+              <option value="" disabled selected>Product</option>
+               </select>
         </div>
         <div>
           <label htmlFor='part'></label>
-          <select id='part' />
+          <select id='part' >
+              <option value="" disabled selected>Part replaced</option> </select>
         </div>
         <div>
           <label htmlFor='notes'></label>
-          <input type='textarea' id='notes' />
+          <input type='textarea' id='notes' placeholder='Notes'/>
         </div>
       </form>
+      <button>Send</button>
     </div>
   );
 }
