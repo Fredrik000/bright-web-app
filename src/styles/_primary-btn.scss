@@ -1,0 +1,11 @@
+.primary-btn {
+  background-color: $primary-color;
+  border-radius: 5px;
+  color: white;
+
+  @include easeOut;
+
+  &:hover {
+    @include blueBtnHover;
+  }
+}

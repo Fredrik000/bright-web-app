@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import PrimaryBtn from 'Components/UI/PrimaryBtn';
 
 function Login() {
   const onSubmitHandler = (e) => {
@@ -10,7 +12,9 @@ function Login() {
       <p> Small explanation detailing what this is for</p>
       <input type='text' name='usernameInp' placeholder='Username'></input>
       <input type='password' name='passwordInp' placeholder='Password'></input>
-      <button type='submit'>Submit</button>
+      <Link to='/Welcome'>
+        <PrimaryBtn type='submit'>Submit</PrimaryBtn>
+      </Link>
     </form>
   );
 }

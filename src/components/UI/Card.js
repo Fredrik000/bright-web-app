@@ -1,10 +1,11 @@
 import React from 'react';
+import PrimaryBtn from 'Components/UI/PrimaryBtn';
 
 function Card(props) {
   return (
     <div className={`card ${props.className}`}>
       {props.children}
-      <button onClick={props.onStartClick}>Start</button>
+      <PrimaryBtn onClick={props.onClick}>Start</PrimaryBtn>
     </div>
   );
 }

@@ -10,21 +10,23 @@ function App() {
   return (
     <>
       <Navbar />
-      <Route path='/Login'>
-        <Login />
-      </Route>
-      <Route path='/Welcome'>
-        <Welcome />
-      </Route>
-      <Route path='/Videos'>
-        <Videos />
-      </Route>
-      <Route path='/Manuals'>
-        <Videos />
-      </Route>
-      <Route path='/Report'>
-        <Report />
-      </Route>
+      <main>
+        <Route path='/Login'>
+          <Login />
+        </Route>
+        <Route path='/Welcome'>
+          <Welcome />
+        </Route>
+        <Route path='/Videos'>
+          <Videos />
+        </Route>
+        <Route path='/Manuals'>
+          <Videos />
+        </Route>
+        <Route path='/Report'>
+          <Report />
+        </Route>
+      </main>
     </>
   );
 }
