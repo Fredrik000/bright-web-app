@@ -109,9 +109,9 @@
 }
 
 .card button {
-  color: white;
   background-color: #174a5b;
   border-radius: 5px;
+  color: white;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -120,26 +120,33 @@
   background-color: #0d2932;
 }
 
-.subject {
-  width: 700px;
-  height: 700px;
+.welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10%;
 }
 
-.subject h2 {
-  font-size: 48px;
+.welcome div {
+  width: 800px;
+  height: 600px;
+  margin: 0 20px;
 }
 
-.subject p {
-  font-size: 24px;
-}
-
-.subject button {
+.welcome button {
   width: 500px;
   height: 60px;
   font-size: 24px;
 }
 
-.video-container {
+.welcome p {
+  font-size: 24px;
+}
+
+.videos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,7 +156,7 @@
           box-sizing: border-box;
 }
 
-.video-container .video {
+.videos .video {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
@@ -160,25 +167,38 @@
   margin-bottom: 0;
 }
 
-.video-container img {
+.videos img {
   height: 250px;
   width: auto;
   margin-top: 10px;
 }
 
-.video-container button {
+.videos button {
   width: 400px;
   height: 30px;
   margin: 10px 0;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
 }
 
 html body {
@@ -186,6 +206,7 @@ html body {
   width: 100%;
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #174a5b;
 }
 
 button {
@@ -194,5 +215,21 @@ button {
 
 li {
   list-style-type: none;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
 }
 /*# sourceMappingURL=main.css.map */

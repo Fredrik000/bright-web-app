@@ -6,7 +6,7 @@ $primary-color: #174a5b;
   transition: all 0.3s ease-out;
 }
 
-@mixin btnHover {
+@mixin blueBtnHover {
   background-color: darken($primary-color, 10);
 }
 

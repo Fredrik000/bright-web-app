@@ -10,14 +10,14 @@
   border-radius: 10px;
 
   button {
-    color: white;
     background-color: $primary-color;
     border-radius: 5px;
+    color: white;
 
     @include easeOut;
 
     &:hover {
-      @include btnHover;
+      @include blueBtnHover;
     }
   }
 }
