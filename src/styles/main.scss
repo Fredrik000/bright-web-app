@@ -1,11 +1,17 @@
 @import 'config';
+@import 'navbar';
+@import 'modal';
+@import 'login';
 @import 'card';
-@import 'form';
+@import 'report';
+@import 'welcome';
+@import 'videos';
+@import 'header';
+@import 'primary-btn';
 
 * {
   box-sizing: border-box;
   margin: 0;
-  align-items: center;
 }
 
 html body {
@@ -13,6 +19,7 @@ html body {
   width: 100%;
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $primary-color;
 }
 
 button {
@@ -21,4 +28,20 @@ button {
 
 li {
   list-style-type: none;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
 }

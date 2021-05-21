@@ -1,13 +1,11 @@
 import React from 'react';
+import PrimaryBtn from 'Components/UI/PrimaryBtn';
 
-function Card() {
+function Card(props) {
   return (
-    <div className='card'>
-      <div>
-        <h2>Heading</h2>
-        <p>Small explantation detaling what this is for </p>
-      </div>
-      <button>Start</button>
+    <div className={`card ${props.className}`}>
+      {props.children}
+      <PrimaryBtn onClick={props.onClick}>Start</PrimaryBtn>
     </div>
   );
 }
