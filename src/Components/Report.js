@@ -2,8 +2,12 @@ import React from 'react';
 
 function Form() {
   return (
+<<<<<<< HEAD:src/components/Form.js
     <div className='form'>
 
+=======
+    <div className='report-form'>
+>>>>>>> master:src/Components/Report.js
       <h1>Repair</h1>
       <p>Small explantation detaling what this is for</p>
 
