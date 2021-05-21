@@ -3,12 +3,12 @@ import Card from 'components/UI/Card';
 import Form from 'components/Form';
 
 function App() {
-  return (
-    <>
-       <Card />
-      <Form />
-    </>
-  );
+    return (
+        <>
+            <Card />
+            <Form />
+        </>
+    );
 }
 
 export default App;
