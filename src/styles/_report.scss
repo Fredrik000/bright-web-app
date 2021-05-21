@@ -1,2 +1,49 @@
-.report-form {
+@import 'config';
+
+.report {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 400px;
+  height: 600px;
+  grid-gap: 10px;
+
+  button {
+    height: 30px;
+    width: 110px;
+  }
+
+  form {
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 30px;
+
+    input,
+    textarea {
+      border-radius: 8px;
+      padding: 15px;
+      width: 500px;
+      border: 2px solid $primary-color;
+      font-size: 15px;
+      color: $primary-color;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 200px;
+    }
+
+    select {
+      border-radius: 8px;
+      padding: 15px;
+      width: 500px;
+      border: 2px solid $primary-color;
+      font-size: 15px;
+      color: $primary-color;
+    }
+
+    ::placeholder {
+      color: $primary-color;
+    }
+  }
 }
