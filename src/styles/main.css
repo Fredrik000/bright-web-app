@@ -80,8 +80,19 @@
           align-items: center;
 }
 
+.card .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 80px;
+}
+
 .card button {
-  width: 500px;
+  width: 100%;
   height: 60px;
   font-size: 24px;
 }
@@ -151,20 +162,34 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 8%;
-  gap: 40px;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.welcome a {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.welcome a:nth-of-type(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .welcome div {
-  width: 800px;
-  height: 600px;
+  height: 700px;
+  padding: 10px;
 }
 
-.welcome p {
+.welcome div p {
   font-size: 24px;
+}
+
+.welcome div button {
+  margin-top: auto;
 }
 
 .videos {
@@ -220,6 +245,7 @@
   color: white;
   height: 30px;
   width: 100px;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -231,6 +257,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
 }
 
@@ -238,12 +265,16 @@ html body {
   height: 100vh;
   width: 100%;
   background-color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #174a5b;
 }
 
 button {
   border: 0;
+}
+
+input,
+textarea {
+  outline: none;
 }
 
 a {

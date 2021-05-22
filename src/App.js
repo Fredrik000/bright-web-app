@@ -4,7 +4,6 @@ import ProtectedRoute from 'Components/ProtectedRoute';
 import Navbar from 'Components/Navbar';
 import Login from 'Components/Pages/Login';
 import Welcome from 'Components/Pages/Welcome';
-import LearningPortal from 'Components/Pages/LearningPortal';
 import Manuals from 'Components/Pages/Manuals';
 import Report from 'Components/Pages/Report';
 import Videos from 'Components/Pages/Videos';
@@ -25,9 +24,6 @@ function App() {
           </Route>
           <Route path='/welcome' exact>
             <Welcome />
-          </Route>
-          <Route path='/learningportal' exact>
-            <LearningPortal />
           </Route>
           <Route path='/videos' exact>
             <Videos />

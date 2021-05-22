@@ -18,10 +18,17 @@ function Welcome(props) {
             <p>Small explantation detaling what this is for </p>
           </Card>
         </Link>
-        <Link to='/learningportal'>
+        <Link to='/videos'>
           <Card>
-            <h1>Learning portal</h1>
-            <img src='' alt='learning portal' />
+            <h1>Watch repair videos</h1>
+            <img src='' alt='videos' />
+            <p>Small explantation detaling what this is for </p>
+          </Card>
+        </Link>
+        <Link to='/manuals'>
+          <Card>
+            <h1>Read or print repair manuals</h1>
+            <img src='' alt='manuals' />
             <p>Small explantation detaling what this is for </p>
           </Card>
         </Link>

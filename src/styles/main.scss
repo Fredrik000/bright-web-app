@@ -11,6 +11,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
 }
 
@@ -18,12 +19,16 @@ html body {
   height: 100vh;
   width: 100%;
   background-color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: $primary-color;
 }
 
 button {
   border: 0;
+}
+
+input,
+textarea {
+  outline: none;
 }
 
 a {
