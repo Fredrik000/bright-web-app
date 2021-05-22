@@ -3,7 +3,7 @@
   height: 600px;
   display: flex;
   flex-direction: column;
-  grid-gap: 10px 10px;
+  gap: 10px 10px;
   margin: auto;
   align-content: center;
 
@@ -15,10 +15,5 @@
     border: 2px solid $primary-color;
     border-radius: 5px;
     padding: 10px;
-  }
-
-  button {
-    height: 30px;
-    width: 100px;
   }
 }

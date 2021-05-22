@@ -2,6 +2,8 @@
   background-color: $primary-color;
   border-radius: 5px;
   color: white;
+  height: 30px;
+  width: 100px;
 
   @include easeOut;
 

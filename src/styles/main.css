@@ -45,7 +45,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  grid-gap: 10px 10px;
+  gap: 10px 10px;
   margin: auto;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -59,11 +59,6 @@
   border: 2px solid #174a5b;
   border-radius: 5px;
   padding: 10px;
-}
-
-.login button {
-  height: 30px;
-  width: 100px;
 }
 
 .card {
@@ -85,6 +80,12 @@
           align-items: center;
 }
 
+.card button {
+  width: 500px;
+  height: 60px;
+  font-size: 24px;
+}
+
 .report {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,12 +97,7 @@
   margin: auto;
   width: 400px;
   height: 600px;
-  grid-gap: 10px;
-}
-
-.report button {
-  height: 30px;
-  width: 110px;
+  gap: 10px;
 }
 
 .report form {
@@ -158,19 +154,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10%;
+  margin-top: 8%;
+  gap: 40px;
 }
 
 .welcome div {
   width: 800px;
   height: 600px;
-  margin: 0 20px;
-}
-
-.welcome button {
-  width: 500px;
-  height: 60px;
-  font-size: 24px;
 }
 
 .welcome p {
@@ -218,15 +208,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2%;
 }
 
 .primary-btn {
   background-color: #174a5b;
   border-radius: 5px;
   color: white;
+  height: 30px;
+  width: 100px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -251,6 +244,10 @@ html body {
 
 button {
   border: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 li {
