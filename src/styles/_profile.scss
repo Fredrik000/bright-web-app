@@ -1,9 +1,6 @@
-@import 'config';
-
-.report {
+.profile {
   display: grid;
   place-items: center;
-  height: 600px;
 
   form {
     display: flex;
@@ -28,10 +25,6 @@
 
     ::placeholder {
       color: $text-color;
-    }
-
-    button {
-      width: 20%;
     }
   }
 }

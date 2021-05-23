@@ -1,5 +1,7 @@
 // Variables
 $primary-color: #174a5b;
+$secondary-color: #00966c;
+$text-color: black;
 
 // Mixins
 @mixin easeOut {
@@ -7,7 +9,7 @@ $primary-color: #174a5b;
 }
 
 @mixin blueBtnHover {
-  background-color: darken($primary-color, 10);
+  background-color: darken($secondary-color, 10);
 }
 
 // Media Query Mixins

@@ -1,10 +1,9 @@
 import React from 'react';
 
-export default function PrimaryBtn(props) {
+export default function SecondaryBtn(props) {
   return (
     <button
-      className={`primary-btn ${props.className}`}
-      type={props.type}
+      className={`secondary-btn ${props.className}`}
       onClick={props.onClick}
     >
       {props.children}

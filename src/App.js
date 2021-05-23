@@ -1,15 +1,17 @@
-import { React, useState } from 'react';
+import { React, useContext } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import ProtectedRoute from 'Components/ProtectedRoute';
+import AuthContext from 'store/auth-context';
 import Navbar from 'Components/Navbar';
 import Login from 'Components/Pages/Login';
 import Welcome from 'Components/Pages/Welcome';
 import Manuals from 'Components/Pages/Manuals';
 import Report from 'Components/Pages/Report';
 import Videos from 'Components/Pages/Videos';
+import UserProfile from 'Components/Pages/UserProfile';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const authCtx = useContext(AuthContext);
 
   return (
     <>
@@ -20,7 +22,7 @@ function App() {
             <Redirect to='welcome' />
           </Route>
           <Route path='/login' exact>
-            <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <Login />
           </Route>
           <Route path='/welcome' exact>
             <Welcome />
@@ -35,7 +37,13 @@ function App() {
             path='/report'
             exact
             Component={Report}
-            isLoggedIn={isLoggedIn}
+            isLoggedIn={authCtx.isLoggedIn}
+          />
+          <ProtectedRoute
+            path='/profile'
+            exact
+            Component={UserProfile}
+            isLoggedIn={authCtx.isLoggedIn}
           />
         </Switch>
       </main>

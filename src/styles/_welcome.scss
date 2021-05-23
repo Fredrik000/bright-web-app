@@ -1,27 +1,14 @@
 .welcome {
   display: flex;
-  margin-top: 8%;
   gap: 10px;
-  padding: 0 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 
   a {
-    flex: 2;
-
-    &:nth-of-type(1) {
-      flex: 1;
-    }
+    flex: 1 1 300px;
   }
 
   div {
     height: 700px;
-    padding: 10px;
-
-    p {
-      font-size: 24px;
-    }
-
-    button {
-      margin-top: auto;
-    }
   }
 }

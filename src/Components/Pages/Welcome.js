@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import AuthContext from 'store/auth-context';
 import Card from 'Components/UI/Card';
 import Header from 'Components/UI/Header';
 
 function Welcome(props) {
+  const authCtx = useContext(AuthContext);
+
   return (
     <>
       <Header>
@@ -11,13 +14,16 @@ function Welcome(props) {
         <p>Small explantation detaling what this is for</p>
       </Header>
       <div className='welcome'>
-        <Link to='/report'>
-          <Card>
-            <h1>Report repairs</h1>
-            <img src='' alt='report' />
-            <p>Small explantation detaling what this is for </p>
-          </Card>
-        </Link>
+        {authCtx.isLoggedIn && (
+          <Link to='/report'>
+            <Card>
+              <h1>Report repairs</h1>
+              <img src='' alt='report' />
+              <p>Small explantation detaling what this is for </p>
+            </Card>
+          </Link>
+        )}
+
         <Link to='/videos'>
           <Card>
             <h1>Watch repair videos</h1>

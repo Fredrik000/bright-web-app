@@ -4,10 +4,9 @@ import PrimaryBtn from 'Components/UI/PrimaryBtn';
 function Report() {
   return (
     <div className='report'>
-      <h1>Repair</h1>
-      <p>Small explantation detaling what this is for</p>
-
       <form>
+        <h1>Repair</h1>
+        <p>Small explantation detaling what this is for</p>
         <div>
           <label htmlFor='name'></label>
           <input type='text' placeholder='Your name' id='name' />
