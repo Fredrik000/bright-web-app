@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from 'store/auth-context';
 import SecondaryBtn from './UI/SecondaryBtn';
+import logoImg from 'images/bright-logo.png';
 
 function Navbar() {
   const authCtx = useContext(AuthContext);
@@ -15,31 +16,26 @@ function Navbar() {
   return (
     <header className='navbar'>
       <Link to='/'>
-        <img
-          className='navbar-img'
-          src='./images/logo/bright-logo.png'
-          alt='Bright Logo'
-        ></img>
+        <img src={logoImg} alt='Bright Logo'></img>
       </Link>
-      <nav>
-        <ul>
-          {!isLoggedIn && (
-            <li>
-              <Link to='/login'>Login</Link>
-            </li>
-          )}
-          {isLoggedIn && (
-            <li>
-              <Link to='/profile'>Profile</Link>
-            </li>
-          )}
-          {isLoggedIn && (
-            <li>
-              <SecondaryBtn onClick={logoutHandler}>Logout</SecondaryBtn>
-            </li>
-          )}
-        </ul>
-      </nav>
+
+      <ul>
+        {!isLoggedIn && (
+          <li>
+            <Link to='/login'>Login</Link>
+          </li>
+        )}
+        {isLoggedIn && (
+          <li>
+            <Link to='/profile'>Profile</Link>
+          </li>
+        )}
+        {isLoggedIn && (
+          <li>
+            <SecondaryBtn onClick={logoutHandler}>Logout</SecondaryBtn>
+          </li>
+        )}
+      </ul>
     </header>
   );
 }

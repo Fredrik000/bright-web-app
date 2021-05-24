@@ -1,15 +1,19 @@
 // Variables
 $primary-color: #174a5b;
-$secondary-color: #00966c;
-$text-color: black;
+$contrast-color: #00966c;
+$secondary-color: black;
 
 // Mixins
 @mixin easeOut {
   transition: all 0.3s ease-out;
 }
 
-@mixin blueBtnHover {
-  background-color: darken($secondary-color, 10);
+@mixin primaryBtnHover {
+  background-color: darken($contrast-color, 10);
+}
+
+@mixin secondaryBtnHover {
+  background-color: darken($primary-color, 10);
 }
 
 // Media Query Mixins

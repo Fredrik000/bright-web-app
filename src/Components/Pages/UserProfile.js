@@ -1,8 +1,8 @@
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
 import { useRef, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-
 import AuthContext from 'store/auth-context';
+import Form from 'Components/UI/Form';
 
 const UserProfile = () => {
   const history = useHistory();
@@ -35,8 +35,8 @@ const UserProfile = () => {
   };
 
   return (
-    <section className='profile'>
-      <form onSubmit={submitHandler}>
+    <div className='form-container'>
+      <Form onSubmit={submitHandler}>
         <h1>Your User Profile</h1>
         <div>
           <input
@@ -48,10 +48,10 @@ const UserProfile = () => {
           />
         </div>
         <div>
-          <PrimaryBtn>Change Password</PrimaryBtn>
+          <PrimaryBtn>Submit</PrimaryBtn>
         </div>
-      </form>
-    </section>
+      </Form>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import AuthContext from '../../store/auth-context';
+import Form from 'Components/UI/Form';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
 
 function Login(props) {
@@ -65,7 +66,7 @@ function Login(props) {
   };
 
   return (
-    <form className='login' onSubmit={sumbitHandler}>
+    <Form onSubmit={sumbitHandler}>
       <h1>Welcome!</h1>
       <p> Small explanation detailing what this is for</p>
       <input
@@ -90,7 +91,7 @@ function Login(props) {
         </Link>
       )}
       {isLoading && <p>Sending request...</p>}
-    </form>
+    </Form>
   );
 }
 export default Login;
