@@ -6,9 +6,9 @@
   text-align: center;
   color: $primary-color;
   border: 2px solid $primary-color;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   align-items: center;
-  padding: 10px;
+  padding: 0.625rem;
 
   .card-content {
     display: flex;
@@ -21,12 +21,12 @@
     }
 
     p {
-      margin-bottom: 200px;
+      margin-bottom: 12.5rem;
     }
   }
 
   button {
     width: 100%;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }

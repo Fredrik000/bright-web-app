@@ -32,7 +32,7 @@
 }
 
 .navbar ul li {
-  margin: 0 10px;
+  margin: 0 0.625rem;
 }
 
 .navbar ul a {
@@ -80,11 +80,11 @@
   text-align: center;
   color: #174a5b;
   border: 2px solid #174a5b;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .card .card-content {
@@ -104,12 +104,12 @@
 }
 
 .card .card-content p {
-  margin-bottom: 200px;
+  margin-bottom: 12.5rem;
 }
 
 .card button {
   width: 100%;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .form-container {
@@ -130,7 +130,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10px;
+  gap: 0.625rem;
   width: 90%;
   max-width: 700px;
 }
@@ -140,8 +140,8 @@
 .form select,
 .form .cb-container {
   width: 100%;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 0.9rem;
+  border-radius: 5px;
   border: 2px solid black;
   color: black;
 }
@@ -188,13 +188,13 @@
 }
 
 .form p {
-  margin-bottom: 25px;
+  margin-bottom: 1.55rem;
 }
 
 .form button {
   width: 15%;
   min-width: 80px;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .welcome {
@@ -206,7 +206,7 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .welcome a {
@@ -235,7 +235,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .videos .video {
@@ -257,7 +257,7 @@
 }
 
 .videos .video img {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .header {
@@ -271,13 +271,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 }
 
 .primary-btn {
   background-color: #00966c;
   border-radius: 5px;
-  padding: 5px;
+  padding: 0.3rem;
   color: white;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-out;
@@ -292,8 +292,8 @@
   background-color: #174a5b;
   border: 3px solid #00966c;
   border-radius: 5px;
-  padding: 5px;
-  font-size: 18px;
+  padding: 0.3rem;
+  font-size: 1.125rem;
   font-weight: bold;
   color: white;
   cursor: pointer;
@@ -320,7 +320,7 @@ body {
 }
 
 main {
-  margin: 20px;
+  margin: 1.25rem;
 }
 
 button {
@@ -331,26 +331,26 @@ input,
 textarea,
 select {
   outline: none;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 3.125rem;
   color: #174a5b;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 1.875;
   color: #174a5b;
 }
 
 p {
-  font-size: 24px;
+  font-size: 1.5;
   color: black;
 }
 /*# sourceMappingURL=main.css.map */
