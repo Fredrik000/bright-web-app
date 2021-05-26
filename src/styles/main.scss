@@ -1,5 +1,6 @@
 @import 'config';
 @import 'navbar';
+@import 'footer';
 @import 'modal';
 @import 'card';
 @import 'form';
@@ -43,16 +44,16 @@ a {
 }
 
 h1 {
-  font-size: 3.125rem;
+  font-size: 3.2rem;
   color: $primary-color;
 }
 
 h2 {
-  font-size: 1.875;
+  font-size: 1.8rem;
   color: $primary-color;
 }
 
 p {
-  font-size: 1.5;
+  font-size: 1.4rem;
   color: $secondary-color;
 }

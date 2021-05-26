@@ -1,6 +1,6 @@
 // Variables
 $primary-color: #174a5b;
-$contrast-color: #00966c;
+$contrast-color: #c3dc93;
 $secondary-color: black;
 
 // Mixins
@@ -8,12 +8,18 @@ $secondary-color: black;
   transition: all 0.3s ease-out;
 }
 
-@mixin primaryBtnHover {
-  background-color: darken($contrast-color, 10);
+@mixin blueBtnHover {
+  background-color: darken($primary-color, 10);
+  color: darken($contrast-color, 10);
 }
 
-@mixin secondaryBtnHover {
-  background-color: darken($primary-color, 10);
+@mixin greenBtnHover {
+  background-color: darken($contrast-color, 15);
+  color: $primary-color;
+}
+
+@mixin textHover {
+  color: darken($contrast-color, 10);
 }
 
 // Media Query Mixins

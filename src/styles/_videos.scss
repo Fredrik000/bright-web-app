@@ -1,19 +1,28 @@
 .videos {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.625rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 
-  .video {
+  .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 0 1 30%;
-    min-width: 500px;
-    min-height: 300px;
+    min-width: 700px;
+    min-height: 500px;
 
     img {
       margin-top: 0.625rem;
+    }
+
+    button {
+      border-radius: 0;
+
+      &:nth-child(2) {
+        background-color: $contrast-color;
+        color: black;
+      }
     }
   }
 }

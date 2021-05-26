@@ -34,7 +34,7 @@ function Report() {
           <textarea type='textarea' id='notes' placeholder='Notes' />
           <label htmlFor='notes'></label>
         </div>
-        <PrimaryBtn>Send</PrimaryBtn>
+        <PrimaryBtn className='blue'>Send</PrimaryBtn>
       </Form>
     </div>
   );

@@ -1,6 +1,6 @@
 .secondary-btn {
   background-color: $primary-color;
-  border: 3px solid $contrast-color;
+  border: 3px solid white;
   border-radius: 5px;
   padding: 0.3rem;
   font-size: 1.125rem;
@@ -11,6 +11,6 @@
   @include easeOut;
 
   &:hover {
-    @include secondaryBtnHover;
+    @include blueBtnHover;
   }
 }

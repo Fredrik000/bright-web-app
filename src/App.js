@@ -3,11 +3,12 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import ProtectedRoute from 'Components/ProtectedRoute';
 import AuthContext from 'store/auth-context';
 import Navbar from 'Components/Navbar';
+import Footer from 'Components/Footer';
 import Login from 'Components/Pages/Login';
 import Welcome from 'Components/Pages/Welcome';
 import Manuals from 'Components/Pages/Manuals';
 import Report from 'Components/Pages/Report';
-import Videos from 'Components/Pages/Videos';
+import LearningPortal from 'Components/Pages/LearningPortal';
 import UserProfile from 'Components/Pages/UserProfile';
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
             <Welcome />
           </Route>
           <Route path='/videos' exact>
-            <Videos />
+            <LearningPortal />
           </Route>
           <Route path='/manuals' exact>
             <Manuals />
@@ -47,6 +48,7 @@ function App() {
           />
         </Switch>
       </main>
+      <Footer />
     </>
   );
 }

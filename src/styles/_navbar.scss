@@ -29,7 +29,7 @@
       @include easeOut;
 
       &:hover {
-        color: $contrast-color;
+        @include textHover;
       }
     }
   }

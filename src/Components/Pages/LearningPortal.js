@@ -1,17 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Card from 'Components/UI/Card';
 import Header from 'Components/UI/Header';
+import PrimaryBtn from 'Components/UI/PrimaryBtn';
 
-function Videos() {
+function Videos(props) {
   return (
     <>
       <Header>
-        <h1>Watch videos</h1>
+        <h1>Learning Portal</h1>
         <p>Small explantation detaling what this is for</p>
       </Header>
       <div className='videos'>
-        <Card className='video'>
+        <Card>
           <img src='placeholder' alt='Product-img' />
+          <div>
+            <h1>Sunbell</h1>
+            <p>Small explantation detaling what this is for </p>
+          </div>
+          <div>
+            <Link to='/'>
+              <PrimaryBtn className='blue'>Video</PrimaryBtn>
+            </Link>
+            <Link to='/manuals'>
+              <PrimaryBtn className='green'>Manual</PrimaryBtn>
+            </Link>
+          </div>
         </Card>
         <Card className='video'>
           <img src='placeholder' alt='Product-img' />

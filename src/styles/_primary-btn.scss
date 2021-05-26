@@ -1,13 +1,26 @@
 .primary-btn {
-  background-color: $contrast-color;
   border-radius: 5px;
   padding: 0.3rem;
-  color: white;
   cursor: pointer;
-
+  width: 15%;
+  min-width: 80px;
+  font-size: 1.2rem;
   @include easeOut;
+}
+
+.blue {
+  background-color: $primary-color;
+  color: white;
+  &:hover {
+    @include blueBtnHover;
+  }
+}
+
+.green {
+  background-color: $contrast-color;
+  color: black;
 
   &:hover {
-    @include primaryBtnHover;
+    @include greenBtnHover;
   }
 }

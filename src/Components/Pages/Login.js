@@ -85,7 +85,7 @@ function Login(props) {
       ></input>
       {!isLoading && (
         <Link to='/report'>
-          <PrimaryBtn type='submit' onClick={sumbitHandler}>
+          <PrimaryBtn className='blue' type='submit' onClick={sumbitHandler}>
             Login
           </PrimaryBtn>
         </Link>

@@ -48,7 +48,7 @@ const UserProfile = () => {
           />
         </div>
         <div>
-          <PrimaryBtn>Submit</PrimaryBtn>
+          <PrimaryBtn className='blue'>Submit</PrimaryBtn>
         </div>
       </Form>
     </div>
