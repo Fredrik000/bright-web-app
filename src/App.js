@@ -10,6 +10,7 @@ import Manuals from 'Components/Pages/Manuals';
 import Report from 'Components/Pages/Report';
 import LearningPortal from 'Components/Pages/LearningPortal';
 import UserProfile from 'Components/Pages/UserProfile';
+import Video from 'Components/Pages/Video';
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path='/videos' exact>
             <LearningPortal />
+          </Route>
+          <Route path='/video' exact>
+            <Video />
           </Route>
           <Route path='/manuals' exact>
             <Manuals />
