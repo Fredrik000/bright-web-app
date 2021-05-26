@@ -66,7 +66,7 @@ function Login(props) {
   };
 
   return (
-    <Form onSubmit={sumbitHandler}>
+    <Form className='login' onSubmit={sumbitHandler}>
       <h1>Welcome!</h1>
       <p> Small explanation detailing what this is for</p>
       <input
@@ -75,14 +75,16 @@ function Login(props) {
         placeholder='Email'
         required
         ref={emailInputRef}
-      ></input>
+      />
+      <label htmlFor='email'>Email</label>
       <input
         type='password'
         id='password'
         placeholder='Password'
         required
         ref={passwordInputRef}
-      ></input>
+      />
+      <label htmlFor='password'>Password</label>
       {!isLoading && (
         <Link to='/report'>
           <PrimaryBtn className='blue' type='submit' onClick={sumbitHandler}>

@@ -5,12 +5,12 @@ import PrimaryBtn from 'Components/UI/PrimaryBtn';
 function Report() {
   return (
     <div className='form-container'>
-      <Form>
+      <Form className='report'>
         <h1>Repair</h1>
         <p>Small explantation detaling what this is for</p>
-        <div>
+        <div className='text-input-container'>
           <input type='text' placeholder='Your name' id='name' />
-          <label htmlFor='name'></label>
+          <label htmlFor='name'>Your name</label>
         </div>
         <div>
           <label htmlFor='product'></label>
