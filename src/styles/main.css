@@ -1,41 +1,71 @@
 .navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 5rem;
   padding: 0 5%;
   background-color: #174a5b;
 }
+
 .navbar img {
   width: 200px;
   height: auto;
-  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
+
 .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
+
 .navbar ul li {
   margin: 0 0.625rem;
 }
+
 .navbar ul a {
   color: white;
   font-weight: bold;
+  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
 .navbar ul a:hover {
   color: #aed06c;
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   height: 5rem;
   background-color: #174a5b;
 }
+
 .footer small {
   color: white;
 }
@@ -64,40 +94,67 @@
 }
 
 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #174a5b;
   border: 2px solid #174a5b;
   border-radius: 0.625rem;
   padding: 0.625rem;
 }
+
 .card .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 80px;
 }
+
 .card .card-content img {
   width: 100%;
   height: auto;
 }
+
 .card .card-content p {
   margin-bottom: 12.5rem;
 }
 
 .form-container {
+  display: -ms-grid;
   display: grid;
   place-items: center;
   width: 100%;
 }
 
+.form-container p {
+  margin-bottom: 1.55rem;
+}
+
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 0.625rem;
   width: 90%;
   max-width: 700px;
+  font-size: 1.125rem;
 }
+
 .form input,
 .form textarea,
 .form select,
@@ -105,78 +162,160 @@
   width: 100%;
   padding: 0.9rem;
   border-radius: 5px;
-  border: 2px solid black;
+  border: 2px solid #174a5b;
   color: black;
 }
+
 .form .cb-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .form .cb-container label {
   margin: 0 15px 0 5px;
 }
+
+.form .input-container input:focus {
+  border-color: #c3dc93;
+}
+
+.form .input-container input:focus + label {
+  -webkit-transform: translateY(-3.8em);
+          transform: translateY(-3.8em);
+  color: #174a5b;
+  padding-right: 1.5rem;
+}
+
+.form .input-container label {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #666;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translateY(-2.3em);
+          transform: translateY(-2.3em);
+  margin-left: 1rem;
+  background-color: white;
+}
+
+.form input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form input::placeholder {
+  color: transparent;
+}
+
 .form textarea {
   resize: none;
   min-height: 200px;
 }
-.form input[type=checkbox] {
+
+.form input[type='checkbox'] {
   width: auto;
-}
-.form ::placeholder {
-  color: black;
-}
-.form p {
-  margin-bottom: 1.55rem;
 }
 
 .welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 1rem;
-}
-.welcome .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 0 1 45%;
-  min-width: 700px;
-  min-height: 500px;
-}
-.welcome .cardImg {
-  max-width: 100px;
 }
 
-.videos {
+.welcome .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.videos .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 0 1 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
   min-width: 700px;
   min-height: 500px;
 }
-.videos .card img {
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.products .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+  min-width: 700px;
+  min-height: 500px;
+}
+
+.products .card img {
   margin-top: 0.625rem;
 }
-.videos .card button {
+
+.products .card button {
   border-radius: 0;
 }
-.videos .card button:nth-child(2) {
+
+.products .card button:nth-child(2) {
   background-color: #c3dc93;
   color: black;
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 6.25rem;
 }
 
@@ -187,6 +326,7 @@
   width: 15%;
   min-width: 80px;
   font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -194,6 +334,7 @@
   background-color: #174a5b;
   color: white;
 }
+
 .blue:hover {
   background-color: #0d2932;
   color: #aed06c;
@@ -203,6 +344,7 @@
   background-color: #c3dc93;
   color: black;
 }
+
 .green:hover {
   background-color: #a3c959;
   color: #174a5b;
@@ -217,30 +359,19 @@
   font-weight: bold;
   color: white;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
 .secondary-btn:hover {
   background-color: #0d2932;
   color: #aed06c;
 }
 
-.video {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-.video .player {
-  position: absolute;
-  top: 0;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  border: 0;
-}
-
 * {
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -282,8 +413,7 @@ h2 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.125rem;
   color: black;
 }
-
 /*# sourceMappingURL=main.css.map */
