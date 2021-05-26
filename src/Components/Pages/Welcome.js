@@ -4,6 +4,8 @@ import AuthContext from 'store/auth-context';
 import Card from 'Components/UI/Card';
 import Header from 'Components/UI/Header';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
+import reportIcon from 'images/icons/report-repair.png';
+import videoIcon from 'images/icons/video.png';
 
 function Welcome(props) {
   const authCtx = useContext(AuthContext);
@@ -18,7 +20,7 @@ function Welcome(props) {
         {authCtx.isLoggedIn && (
           <Card>
             <h1>Report repairs</h1>
-            <img src='' alt='report' />
+            <img className={"cardImg"} src={reportIcon} alt='report' />
             <p>Small explantation detaling what this is for </p>
             <Link to='/report'>
               <PrimaryBtn className='blue'>Video</PrimaryBtn>
@@ -28,7 +30,7 @@ function Welcome(props) {
 
         <Card>
           <h1>Watch repair videos</h1>
-          <img src='' alt='videos' />
+          <img className={"cardImg"} src= {videoIcon} alt='videos' />
           <p>Small explantation detaling what this is for </p>
           <Link to='/videos'>
             <PrimaryBtn className='blue'>Video</PrimaryBtn>

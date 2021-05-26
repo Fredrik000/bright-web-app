@@ -13,13 +13,13 @@ function Videos(props) {
       </Header>
       <div className='videos'>
         <Card>
-          <img src='placeholder' alt='Product-img' />
+          <img src='http://img.youtube.com' alt='Product-img' />
           <div>
-            <h1>Sunbell</h1>
+            <h1>Sunbell 2.0</h1>
             <p>Small explantation detaling what this is for </p>
           </div>
           <div>
-            <Link to='/'>
+            <Link to='/video'>
               <PrimaryBtn className='blue'>Video</PrimaryBtn>
             </Link>
             <Link to='/manuals'>
@@ -27,16 +27,26 @@ function Videos(props) {
             </Link>
           </div>
         </Card>
-        <Card className='video'>
+        <Card className='videos'>
+          <img src='' alt='Product-img' />
+          <div>
+            <h1>TurtleLamp</h1>
+            <p>Small explantation detaling what this is for </p>
+            <Link to='/video'>
+              <PrimaryBtn className='blue'>Video</PrimaryBtn>
+            </Link>
+            <Link to='/manuals'>
+              <PrimaryBtn className='green'>Manual</PrimaryBtn>
+            </Link>
+          </div>
+        </Card>
+        <Card className='videos'>
           <img src='placeholder' alt='Product-img' />
         </Card>
-        <Card className='video'>
+        <Card className='videos'>
           <img src='placeholder' alt='Product-img' />
         </Card>
-        <Card className='video'>
-          <img src='placeholder' alt='Product-img' />
-        </Card>
-        <Card className='video'>
+        <Card className='videos'>
           <img src='placeholder' alt='Product-img' />
         </Card>
       </div>
