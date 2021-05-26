@@ -2,6 +2,10 @@
   display: grid;
   place-items: center;
   width: 100%;
+
+  p {
+    margin-bottom: 1.55rem;
+  }
 }
 
 .form {
@@ -11,6 +15,7 @@
   gap: 0.625rem;
   width: 90%;
   max-width: 700px;
+  font-size: 1.125rem;
 
   input,
   textarea,
@@ -33,7 +38,30 @@
     }
   }
 
-  ::placeholder {
+  .input-container {
+    input {
+      &:focus {
+        border-color: $contrast-color;
+      }
+
+      &:focus + label {
+        transform: translateY(-3.8em);
+        color: $primary-color;
+        padding-right: 1.5rem;
+      }
+    }
+    label {
+      display: inline-block;
+      width: fit-content;
+      color: #666;
+      transition: all 0.3s;
+      transform: translateY(-2.3em);
+      margin-left: 1rem;
+      background-color: white;
+    }
+  }
+
+  input::placeholder {
     color: transparent;
   }
 
@@ -44,9 +72,5 @@
 
   input[type='checkbox'] {
     width: auto;
-  }
-
-  p {
-    margin-bottom: 1.55rem;
   }
 }

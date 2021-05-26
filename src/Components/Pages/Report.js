@@ -8,7 +8,7 @@ function Report() {
       <Form className='report'>
         <h1>Repair</h1>
         <p>Small explantation detaling what this is for</p>
-        <div className='text-input-container'>
+        <div className='input-container'>
           <input type='text' placeholder='Your name' id='name' />
           <label htmlFor='name'>Your name</label>
         </div>
@@ -16,8 +16,8 @@ function Report() {
           <label htmlFor='product'></label>
           <select id='product'>
             <option value=''>Product 1</option>
-            <option value=''>Product 1</option>
-            <option value=''>Product 1</option>
+            <option value=''>Product 2</option>
+            <option value=''>Product 3</option>
           </select>
           <label htmlFor='product'></label>
         </div>
@@ -32,7 +32,6 @@ function Report() {
         </div>
         <div>
           <textarea type='textarea' id='notes' placeholder='Notes' />
-          <label htmlFor='notes'></label>
         </div>
         <PrimaryBtn className='blue'>Send</PrimaryBtn>
       </Form>

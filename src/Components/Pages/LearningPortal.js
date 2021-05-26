@@ -4,14 +4,14 @@ import Card from 'Components/UI/Card';
 import Header from 'Components/UI/Header';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
 
-function Videos(props) {
+function LearningPortal(props) {
   return (
     <>
       <Header>
         <h1>Learning Portal</h1>
         <p>Small explantation detaling what this is for</p>
       </Header>
-      <div className='videos'>
+      <div className='products'>
         <Card>
           <img src='placeholder' alt='Product-img' />
           <div>
@@ -44,4 +44,4 @@ function Videos(props) {
   );
 }
 
-export default Videos;
+export default LearningPortal;
