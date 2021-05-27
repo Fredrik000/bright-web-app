@@ -38,7 +38,7 @@ const UserProfile = () => {
     <div className='form-container'>
       <Form onSubmit={submitHandler}>
         <h1>Your User Profile</h1>
-        <div>
+        <div className='input-container'>
           <input
             type='password'
             id='new-password'
@@ -46,6 +46,7 @@ const UserProfile = () => {
             placeholder='New Password'
             ref={newPasswordInputRef}
           />
+          <label htmlFor='new-password'>New Password</label>
         </div>
         <div>
           <PrimaryBtn className='blue'>Submit</PrimaryBtn>

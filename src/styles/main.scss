@@ -5,11 +5,10 @@
 @import 'card';
 @import 'form';
 @import 'welcome';
-@import 'videos';
+@import 'products';
 @import 'header';
 @import 'primary-btn';
 @import 'secondary-btn';
-@import 'video';
 
 * {
   box-sizing: border-box;
@@ -55,6 +54,6 @@ h2 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.125rem;
   color: $secondary-color;
 }
