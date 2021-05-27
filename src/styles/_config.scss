@@ -22,6 +22,11 @@ $secondary-color: black;
   color: darken($contrast-color, 10);
 }
 
+@mixin logoHover {
+  filter: invert(92%) sepia(6%) saturate(2211%) hue-rotate(30deg)
+    brightness(97%) contrast(83%);
+}
+
 // Media Query Mixins
 @mixin mediaSm {
   @media screen and (max-width: 500px) {

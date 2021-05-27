@@ -13,6 +13,10 @@
     width: 200px;
     height: auto;
     filter: brightness(0) invert(1);
+
+    &:hover {
+      @include logoHover;
+    }
   }
 
   ul {

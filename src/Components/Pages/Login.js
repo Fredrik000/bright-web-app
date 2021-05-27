@@ -69,7 +69,7 @@ function Login(props) {
     <Form className='login' onSubmit={sumbitHandler}>
       <h1>Welcome!</h1>
       <p> Small explanation detailing what this is for</p>
-      <div className='input-container'>
+      <div className='form-group'>
         <input
           type='text'
           id='email'
@@ -79,7 +79,7 @@ function Login(props) {
         />
         <label htmlFor='email'>Email</label>
       </div>
-      <div className='input-container'>
+      <div className='form-group'>
         <input
           type='password'
           id='password'
