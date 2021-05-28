@@ -1,22 +1,28 @@
 import React from 'react'
-import ReactPlayer from "react-player";
-
 import Header from 'Components/UI/Header';
+import {products} from 'Components/Objects/Products'
 
-function Video() {
+function Video(props) {
+
+    let product = products[props.productId];
+
     return(
         <>
-            <Header>
-                <h1>Sunbell 2.0</h1>
-                <p>This video explains how to use your sunbell</p>
+            <Header className='headerting'>
+                <h1>{product.name}</h1>
+                <p>{product.description}</p>
             </Header>
             <div className='video'>
                 <iframe
                     className='player'
-                    src='https://www.youtube.com/embed/watch?v=7aWow1MKHzc'
-                />
+                    src={product.videoLink}
+                    title="Product video" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen>
+                </iframe>
             </div>
         </>
     );
 }
+
 export default Video;
