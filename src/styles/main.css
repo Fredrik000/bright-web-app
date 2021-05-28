@@ -215,6 +215,10 @@
   background-color: white;
 }
 
+.form .invalid input {
+  border-color: red;
+}
+
 .form input::-webkit-input-placeholder {
   color: transparent;
 }

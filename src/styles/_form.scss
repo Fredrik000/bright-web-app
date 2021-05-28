@@ -60,6 +60,10 @@
     }
   }
 
+  .invalid input {
+    border-color: red;
+  }
+
   input::placeholder {
     color: transparent;
   }

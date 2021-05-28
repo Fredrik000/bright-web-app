@@ -12,6 +12,8 @@ function Login(props) {
   const authCtx = useContext(AuthContext);
 
   const [isLoading, setIsLoading] = useState(false);
+  const [enteredEmailIsValid, setEnteredEmailIsValid] = useState(true);
+  const [enteredPasswordIsValid, setEnteredPasswordIsValid] = useState(true);
 
   const sumbitHandler = (e) => {
     e.preventDefault();
@@ -19,15 +21,28 @@ function Login(props) {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
-    // Add validation here
-
+    // Validation
+    if (enteredEmail.trim() === '' && enteredPassword.trim() === '') {
+      setEnteredEmailIsValid(false);
+      setEnteredPasswordIsValid(false);
+      return;
+    } else if (enteredEmail.trim() === '') {
+      setEnteredEmailIsValid(false);
+      return;
+    } else if (enteredPassword.trim() === '') {
+      setEnteredPasswordIsValid(false);
+      return;
+    }
     setIsLoading(true);
+    setEnteredPasswordIsValid(true);
+    setEnteredPasswordIsValid(true);
 
     fetch(
       'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCobvg1vKK83g536cUukr51CqxIJun1cBc',
       {
         method: 'POST',
         body: JSON.stringify({
+          idToken: authCtx.token,
           email: enteredEmail,
           password: enteredPassword,
           returnSecureToken: true,
@@ -37,6 +52,7 @@ function Login(props) {
         },
       }
     )
+      // Validation
       .then((res) => {
         setIsLoading();
         if (res.ok) {
@@ -47,11 +63,11 @@ function Login(props) {
             if (data && data.error && data.error.message) {
               errorMessage = data.error.message;
             }
-
             throw new Error(errorMessage);
           });
         }
       })
+      // If validated -> get data
       .then((data) => {
         // Get expiration time in seconds from API, convert to ms and add to current timestamp
         const expirationTime = new Date(
@@ -62,14 +78,30 @@ function Login(props) {
       })
       .catch((err) => {
         alert(err.message);
+        if (err.message === 'EMAIL_NOT_FOUND') {
+          setEnteredEmailIsValid(false);
+          setEnteredPasswordIsValid(true);
+        } else if (err.message === 'INVALID_PASSWORD') {
+          setEnteredPasswordIsValid(false);
+          setEnteredEmailIsValid(true);
+        }
       });
   };
+
+  // Make input field red if not validated
+  const emailInputClass = enteredEmailIsValid
+    ? 'form-group'
+    : 'form-group invalid';
+
+  const passwordInputClass = enteredPasswordIsValid
+    ? 'form-group'
+    : 'form-group invalid';
 
   return (
     <Form className='login' onSubmit={sumbitHandler}>
       <h1>Welcome!</h1>
       <p> Small explanation detailing what this is for</p>
-      <div className='form-group'>
+      <div className={emailInputClass}>
         <input
           type='text'
           id='email'
@@ -79,7 +111,7 @@ function Login(props) {
         />
         <label htmlFor='email'>Email</label>
       </div>
-      <div className='form-group'>
+      <div className={passwordInputClass}>
         <input
           type='password'
           id='password'

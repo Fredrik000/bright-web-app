@@ -48,7 +48,6 @@ function App() {
           />
         </Switch>
       </main>
-      <Footer />
     </>
   );
 }

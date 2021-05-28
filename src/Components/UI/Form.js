@@ -3,7 +3,9 @@ import React from 'react';
 function Card(props) {
   return (
     <div className='form-container'>
-      <div className={`form ${props.className}`}>{props.children}</div>
+      <form className={`form ${props.className}`} onSubmit={props.onSubmit}>
+        {props.children}
+      </form>
     </div>
   );
 }
