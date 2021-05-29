@@ -52,7 +52,7 @@ function Login(props) {
         },
       }
     )
-      // Validation
+      // Response validation
       .then((res) => {
         setIsLoading();
         if (res.ok) {
@@ -73,9 +73,10 @@ function Login(props) {
         const expirationTime = new Date(
           new Date().getTime() + +data.expiresIn * 1000
         );
-        authCtx.login(data.idToken, expirationTime.toISOString());
+        authCtx.login(data.idToken, enteredEmail, expirationTime.toISOString());
         history.replace('/');
       })
+      // Error handling
       .catch((err) => {
         alert(err.message);
         if (err.message === 'EMAIL_NOT_FOUND') {

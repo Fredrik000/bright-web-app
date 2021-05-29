@@ -1,20 +1,42 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useContext } from 'react';
+import AuthContext from '../../store/auth-context';
 import Form from 'Components/UI/Form';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
 
-function Report() {
+function Report(props) {
   const productInputRef = useRef();
   const notesInputRef = useRef();
 
-  const sumbitHandler = (e) => {
+  const authCtx = useContext(AuthContext);
+
+  // POST data to database, using Firebase API
+  async function submitHandler(e) {
     e.preventDefault();
 
-    const selectedProduct = productInputRef.current.value;
-    const enteredNotes = productInputRef.current.value;
-  };
+    // Add form validation here
+
+    const form = {
+      email: authCtx.loggedInEmail,
+      product: productInputRef.current.value,
+      parts: [],
+      notes: notesInputRef.current.value,
+    };
+    const response = await fetch(
+      'https://bright-web-app-default-rtdb.europe-west1.firebasedatabase.app/repair-forms.json',
+      {
+        method: 'POST',
+        body: JSON.stringify(form),
+        headers: {
+          'content-Type': 'application/json',
+        },
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+  }
 
   return (
-    <Form className='report' onSubmit={sumbitHandler}>
+    <Form className='report' onSubmit={submitHandler}>
       <h1>Repair</h1>
       <p>Small explantation detaling what this is for</p>
       <div>
