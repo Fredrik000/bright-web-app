@@ -12,10 +12,11 @@ function Login(props) {
   const authCtx = useContext(AuthContext);
 
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [enteredEmailIsValid, setEnteredEmailIsValid] = useState(true);
   const [enteredPasswordIsValid, setEnteredPasswordIsValid] = useState(true);
 
-  const sumbitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
 
     const enteredEmail = emailInputRef.current.value;
@@ -37,56 +38,55 @@ function Login(props) {
     setEnteredPasswordIsValid(true);
     setEnteredPasswordIsValid(true);
 
-    fetch(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCobvg1vKK83g536cUukr51CqxIJun1cBc',
-      {
-        method: 'POST',
-        body: JSON.stringify({
-          idToken: authCtx.token,
-          email: enteredEmail,
-          password: enteredPassword,
-          returnSecureToken: true,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+    try {
+      const response = await fetch(
+        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCobvg1vKK83g536cUukr51CqxIJun1cBc',
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            idToken: authCtx.token,
+            email: enteredEmail,
+            password: enteredPassword,
+            returnSecureToken: true,
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      // Transform JSON response into JS object
+      const data = await response.json();
+
+      // We are no longer fetching data, and must update state accordingly
+      setIsLoading(false);
+
+      // Error handling on response
+      if (!response.ok) {
+        let errorMessage = 'Authentication failed!';
+
+        if (data && data.error && data.error.message) {
+          errorMessage = data.error.message;
+          throw new Error(errorMessage);
+        }
       }
-    )
-      // Response validation
-      .then((res) => {
-        setIsLoading();
-        if (res.ok) {
-          return res.json();
-        } else {
-          return res.json().then((data) => {
-            let errorMessage = 'Authentication failed!';
-            if (data && data.error && data.error.message) {
-              errorMessage = data.error.message;
-            }
-            throw new Error(errorMessage);
-          });
-        }
-      })
-      // If validated -> get data
-      .then((data) => {
-        // Get expiration time in seconds from API, convert to ms and add to current timestamp
-        const expirationTime = new Date(
-          new Date().getTime() + +data.expiresIn * 1000
-        );
-        authCtx.login(data.idToken, enteredEmail, expirationTime.toISOString());
-        history.replace('/');
-      })
-      // Error handling
-      .catch((err) => {
-        alert(err.message);
-        if (err.message === 'EMAIL_NOT_FOUND') {
-          setEnteredEmailIsValid(false);
-          setEnteredPasswordIsValid(true);
-        } else if (err.message === 'INVALID_PASSWORD') {
-          setEnteredPasswordIsValid(false);
-          setEnteredEmailIsValid(true);
-        }
-      });
+
+      // Get expiration time in seconds from API, convert to ms and add to current timestamp
+      const expirationTime = new Date(
+        new Date().getTime() + +data.expiresIn * 1000
+      );
+      authCtx.login(data.idToken, enteredEmail, expirationTime.toISOString());
+      history.replace('/');
+    } catch (err) {
+      setError(err.message);
+      if (err.message === 'EMAIL_NOT_FOUND') {
+        setEnteredEmailIsValid(false);
+        setEnteredPasswordIsValid(true);
+      } else if (err.message === 'INVALID_PASSWORD') {
+        setEnteredPasswordIsValid(false);
+        setEnteredEmailIsValid(true);
+      }
+    }
   };
 
   // Make input field red if not validated
@@ -98,10 +98,21 @@ function Login(props) {
     ? 'form-group'
     : 'form-group invalid';
 
+  // Content that is displayed on screen
+  let content = <p>Please fill out form and click "Submit"</p>;
+
+  if (error) {
+    content = <p>{error}</p>;
+  }
+
+  if (isLoading) {
+    content = <p>Loading...</p>;
+  }
+
   return (
-    <Form className='login' onSubmit={sumbitHandler}>
+    <Form className='login' onSubmit={submitHandler}>
       <h1>Welcome!</h1>
-      <p> Small explanation detailing what this is for</p>
+      {content}
       <div className={emailInputClass}>
         <input
           type='text'
@@ -124,7 +135,7 @@ function Login(props) {
       </div>
       {!isLoading && (
         <Link to='/report'>
-          <PrimaryBtn className='blue' type='submit' onClick={sumbitHandler}>
+          <PrimaryBtn className='blue' type='submit' onClick={submitHandler}>
             Login
           </PrimaryBtn>
         </Link>
