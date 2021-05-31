@@ -10,7 +10,6 @@ $secondary-color: black;
 
 @mixin blueBtnHover {
   background-color: darken($primary-color, 10);
-  color: darken($contrast-color, 10);
 }
 
 @mixin greenBtnHover {
@@ -20,6 +19,11 @@ $secondary-color: black;
 
 @mixin textHover {
   color: darken($contrast-color, 10);
+}
+
+@mixin logoHover {
+  filter: invert(92%) sepia(6%) saturate(2211%) hue-rotate(30deg)
+    brightness(97%) contrast(83%);
 }
 
 // Media Query Mixins

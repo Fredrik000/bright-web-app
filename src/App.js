@@ -3,7 +3,6 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import ProtectedRoute from 'Components/ProtectedRoute';
 import AuthContext from 'store/auth-context';
 import Navbar from 'Components/Navbar';
-import Footer from 'Components/Footer';
 import Login from 'Components/Pages/Login';
 import Welcome from 'Components/Pages/Welcome';
 import Manuals from 'Components/Pages/Manuals';
@@ -48,7 +47,6 @@ function App() {
           />
         </Switch>
       </main>
-      <Footer />
     </>
   );
 }
