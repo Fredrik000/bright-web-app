@@ -1,10 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Card from 'Components/UI/Card';
 import Header from 'Components/UI/Header';
-import PrimaryBtn from 'Components/UI/PrimaryBtn';
+import Product from 'Components/UI/Product';
 
 function LearningPortal(props) {
+  const products = [
+    {
+      id: 'unique-ID 1',
+      name: 'Product 1',
+      desc: 'some description 1',
+      src: 'http://img.youtube.com',
+    },
+    {
+      id: 'unique-ID 2',
+      name: 'product 2',
+      desc: 'some description 2',
+      src: 'http://img.youtube.com',
+    },
+    {
+      id: 'unique-ID 3',
+      name: 'product 3',
+      desc: 'some description 3',
+      src: 'http://img.youtube.com',
+    },
+  ];
   return (
     <>
       <Header>
@@ -12,43 +30,14 @@ function LearningPortal(props) {
         <p>Small explantation detaling what this is for</p>
       </Header>
       <div className='products'>
-        <Card>
-          <img src='http://img.youtube.com' alt='Product-img' />
-          <div>
-            <h1>Sunbell 2.0</h1>
-            <p>Small explantation detaling what this is for </p>
-          </div>
-          <div>
-            <Link to='/video'>
-              <PrimaryBtn className='blue'>Video</PrimaryBtn>
-            </Link>
-            <Link to='/manuals'>
-              <PrimaryBtn className='green'>Manual</PrimaryBtn>
-            </Link>
-          </div>
-        </Card>
-        <Card className='videos'>
-          <img src='' alt='Product-img' />
-          <div>
-            <h1>TurtleLamp</h1>
-            <p>Small explantation detaling what this is for </p>
-            <Link to='/video'>
-              <PrimaryBtn className='blue'>Video</PrimaryBtn>
-            </Link>
-            <Link to='/manuals'>
-              <PrimaryBtn className='green'>Manual</PrimaryBtn>
-            </Link>
-          </div>
-        </Card>
-        <Card className='videos'>
-          <img src='placeholder' alt='Product-img' />
-        </Card>
-        <Card className='videos'>
-          <img src='placeholder' alt='Product-img' />
-        </Card>
-        <Card className='videos'>
-          <img src='placeholder' alt='Product-img' />
-        </Card>
+        {products.map((product) => (
+          <Product
+            key={product.id}
+            name={product.name}
+            desc={product.desc}
+            src={product.src}
+          />
+        ))}
       </div>
     </>
   );
