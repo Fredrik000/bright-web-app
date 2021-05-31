@@ -13,7 +13,6 @@ import UserProfile from 'Components/Pages/UserProfile';
 import Video from 'Components/Pages/Video';
 
 function App() {
-
   const authCtx = useContext(AuthContext);
   const [productId, setProductId] = useState(0);
 

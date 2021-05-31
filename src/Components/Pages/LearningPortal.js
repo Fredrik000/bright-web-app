@@ -4,6 +4,7 @@ import Card from 'Components/UI/Card';
 import Header from 'Components/UI/Header';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
 import {products} from 'Components/Objects/Products';
+import sunbellIcon from '../../images/icons/sunbell-icon.png';
 
 export default function LearningPortal(props) {
 
@@ -20,7 +21,7 @@ export default function LearningPortal(props) {
         <div className='products'>
 
         <Card className='videos'>
-          <img src='http://img.youtube.com' alt='Product-img' />
+          <img className="card-img" src={sunbellIcon} alt='Product-img' />
           <div>
             <h1>{"Sunbell 2.0"}</h1>
             <p>Small explantation detaling what this is for </p>

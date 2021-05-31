@@ -12,8 +12,9 @@
     min-width: 700px;
     min-height: 500px;
 
-    img {
+    .card-img {
       margin-top: 0.625rem;
+      max-width: 200px;
     }
 
     button {
