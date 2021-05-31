@@ -10,7 +10,6 @@ $secondary-color: black;
 
 @mixin blueBtnHover {
   background-color: darken($primary-color, 10);
-  color: darken($contrast-color, 10);
 }
 
 @mixin greenBtnHover {
