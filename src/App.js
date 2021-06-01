@@ -10,6 +10,7 @@ import Report from 'Components/Pages/Report';
 import LearningPortal from 'Components/Pages/LearningPortal';
 import UserProfile from 'Components/Pages/UserProfile';
 import Videos from 'Components/Pages/Videos';
+import NotFound from 'Components/Pages/NotFound';
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -49,6 +50,9 @@ function App() {
             Component={UserProfile}
             isLoggedIn={authCtx.isLoggedIn}
           />
+          <Route path='*'>
+            <NotFound />
+          </Route>
         </Switch>
       </main>
     </>

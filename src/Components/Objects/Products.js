@@ -11,13 +11,13 @@ export const PRODUCTS = [
     name: 'Turtle Lamp',
     icon: 'temp',
     desc: 'Description 2',
-    videoLink: 'Source of the learning video',
+    videoLink: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
   {
     id: 'q3',
     name: 'Product name 3',
     icon: 'temp',
     desc: 'Description 3',
-    videoLink: 'Source of the learning video',
+    videoLink: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
 ];
