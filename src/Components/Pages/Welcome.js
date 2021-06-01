@@ -13,7 +13,7 @@ function Welcome(props) {
   return (
     <>
       <Header>
-        <h1>Watch videos</h1>
+        <h1>Welcome!</h1>
         <p>Small explantation detaling what this is for</p>
       </Header>
       <div className='welcome'>
@@ -23,7 +23,7 @@ function Welcome(props) {
             <img className={'cardImg'} src={LearningIcon} alt='report' />
             <p>Small explantation detaling what this is for </p>
             <Link to='/report'>
-              <PrimaryBtn className='blue'>Video</PrimaryBtn>
+              <PrimaryBtn className='blue'>Start</PrimaryBtn>
             </Link>
           </Card>
         )}
@@ -32,8 +32,8 @@ function Welcome(props) {
           <h1>Watch repair videos</h1>
           <img className={'cardImg'} src={VideoIcon} alt='videos' />
           <p>Small explantation detaling what this is for </p>
-          <Link to='/videos'>
-            <PrimaryBtn className='blue'>Video</PrimaryBtn>
+          <Link to='/learningportal'>
+            <PrimaryBtn className='blue'>Start</PrimaryBtn>
           </Link>
         </Card>
       </div>

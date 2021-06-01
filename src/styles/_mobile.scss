@@ -1,0 +1,87 @@
+@include mediaMobile {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  // Navbar
+  .navbar {
+    min-height: 3.5rem;
+    img {
+      width: 75px;
+      height: auto;
+      margin-left: 0.625rem;
+    }
+
+    li {
+      font-weight: normal;
+    }
+  }
+
+  // Secondary buton component
+  .secondary-btn {
+    font-weight: normal;
+  }
+
+  // Header
+  .header {
+    margin-bottom: 1rem;
+  }
+
+  // Welcome
+  .welcome {
+    .card {
+      flex: 0 1 100%;
+      min-height: 250px;
+    }
+  }
+
+  // Learning Portal
+  .products {
+    .card {
+      flex: 0 1 100%;
+      min-height: 250px;
+    }
+  }
+}
+
+@include mediaDesktop {
+  .navbar {
+    min-height: 5rem;
+    padding: 0 5%;
+    img {
+      width: 200px;
+      height: auto;
+    }
+    li {
+      font-weight: bold;
+    }
+  }
+
+  .secondary-btn {
+    font-weight: bold;
+  }
+
+  .header {
+    margin-bottom: 6.25rem;
+  }
+
+  .welcome {
+    .card {
+      flex: 0 1 45%;
+      min-width: 700px;
+      min-height: 500px;
+    }
+  }
+
+  .products {
+    .card {
+      flex: 0 1 45%;
+      min-width: 700px;
+      min-height: 500px;
+    }
+  }
+}

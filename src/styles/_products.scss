@@ -5,16 +5,8 @@
   gap: 1rem;
 
   .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 0 1 30%;
-    min-width: 700px;
-    min-height: 500px;
-
-    .card-img {
+    img {
       margin-top: 0.625rem;
-      max-width: 200px;
     }
 
     button {

@@ -5,14 +5,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 5rem;
-  padding: 0 5%;
   background-color: $primary-color;
 
   img {
-    width: 200px;
-    height: auto;
     filter: brightness(0) invert(1);
+
+    &:hover {
+      @include logoHover;
+    }
   }
 
   ul {
@@ -26,8 +26,6 @@
 
     a {
       color: white;
-      font-weight: bold;
-
       @include easeOut;
 
       &:hover {
