@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import AuthContext from 'store/auth-context';
 import SecondaryBtn from './UI/SecondaryBtn';
 import logoImg from 'images/bright-logo.png';
@@ -22,12 +22,12 @@ function Navbar() {
       <ul>
         {!isLoggedIn && (
           <li>
-            <Link to='/login'>Login</Link>
+            <NavLink to='/login'>Login</NavLink>
           </li>
         )}
         {isLoggedIn && (
           <li>
-            <Link to='/profile'>Profile</Link>
+            <NavLink to='/profile'>Profile</NavLink>
           </li>
         )}
         {isLoggedIn && (

@@ -12,7 +12,7 @@ function Product(props) {
         <p>{props.desc}</p>
       </div>
       <div>
-        <Link to={'/video/'+props.key}>
+        <Link to={`/learningportal/videos/${props.id}`}>
           <PrimaryBtn className='blue'>Video</PrimaryBtn>
         </Link>
         <Link to='/manuals'>

@@ -1,10 +1,9 @@
 import React from 'react';
 import Header from 'Components/UI/Header';
 import Product from 'Components/UI/Product';
-import {products} from 'Components/Objects/Products';
+import { PRODUCTS } from 'Components/Objects/Products';
 
 function LearningPortal(props) {
-
   return (
     <>
       <Header>
@@ -12,9 +11,10 @@ function LearningPortal(props) {
         <p>Small explantation detaling what this is for</p>
       </Header>
       <div className='products'>
-        {products.map((product) => (
+        {PRODUCTS.map((product) => (
           <Product
             key={product.id}
+            id={product.id}
             name={product.name}
             desc={product.desc}
             icon={product.icon}
