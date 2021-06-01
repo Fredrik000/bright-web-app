@@ -20,16 +20,18 @@ function Videos(props) {
         <h1>{productVideo.name}</h1>
         <p>{productVideo.desc}</p>
       </Header>
-      <div className='video'>
-        <iframe
-          className='player'
-          src={productVideo.videoLink}
-          title='Product video'
-          frameBorder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
-        ></iframe>
-      </div>
+        <div className="videoHolder">
+            <div className='video'>
+                <iframe
+                    className='player'
+                    src={productVideo.videoLink}
+                    title='Product video'
+                    frameBorder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                    allowFullScreen
+                ></iframe>
+            </div>
+        </div>
     </>
   );
 }
