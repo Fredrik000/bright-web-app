@@ -27,7 +27,7 @@ function App() {
           <Route path='/welcome' exact>
             <Welcome />
           </Route>
-          <Route path='/videos' exact>
+          <Route path='/learningportal' exact>
             <LearningPortal />
           </Route>
           <Route path='/manuals' exact>
