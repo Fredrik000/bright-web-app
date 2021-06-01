@@ -20,9 +20,9 @@ function Videos(props) {
         <h1>{productVideo.name}</h1>
         <p>{productVideo.desc}</p>
       </Header>
-      <div className='video'>
+      <div className='video-player'>
         <iframe
-          className='player'
+          className='video-player'
           src={productVideo.videoLink}
           title='Product video'
           frameBorder='0'

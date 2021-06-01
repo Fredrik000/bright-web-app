@@ -4,8 +4,8 @@ import AuthContext from 'store/auth-context';
 import Card from 'Components/UI/Card';
 import Header from 'Components/UI/Header';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
-import LearningIcon from '../../images/icons/report-repair.png'
-import VideoIcon from '../../images/icons/video.png'
+import LearningIcon from '../../images/icons/report-repair.png';
+import VideoIcon from '../../images/icons/video.png';
 
 function Welcome(props) {
   const authCtx = useContext(AuthContext);
@@ -29,7 +29,7 @@ function Welcome(props) {
         )}
 
         <Card>
-          <h1>Watch repair videos</h1>
+          <h1>Learning portal</h1>
           <img className={'cardImg'} src={VideoIcon} alt='videos' />
           <p>Small explantation detaling what this is for </p>
           <Link to='/learningportal'>

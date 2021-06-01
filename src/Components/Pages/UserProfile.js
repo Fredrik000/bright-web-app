@@ -38,7 +38,7 @@ const UserProfile = () => {
     <div className='form-container'>
       <Form onSubmit={submitHandler}>
         <h1>Your User Profile</h1>
-        <div className='input-container'>
+        <div className='form-group'>
           <input
             type='password'
             id='new-password'
