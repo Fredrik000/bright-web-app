@@ -6,13 +6,13 @@ import PrimaryBtn from 'Components/UI/PrimaryBtn';
 function Product(props) {
   return (
     <Card>
-      <img src={props.src} alt='Product-img' />
+      <img src={props.icon} alt='Product-img' />
       <div>
         <h1>{props.name}</h1>
         <p>{props.desc}</p>
       </div>
       <div>
-        <Link to='/video'>
+        <Link to={'/video/'+props.key}>
           <PrimaryBtn className='blue'>Video</PrimaryBtn>
         </Link>
         <Link to='/manuals'>
