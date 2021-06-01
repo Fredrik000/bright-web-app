@@ -2,17 +2,24 @@ import React from 'react';
 
 export const products=[
     {
-        id:0,
+        id:"0",
         name:"Sunbell 2.0",
-        description:"Small explanation detailing what this is for",
+        icon:"images/icons/sunbell-icon.png",
+        desc:"Description 1",
         videoLink:"https://www.youtube.com/embed/RVH5dn1cxAQ",
-        manualLink:"Source of the manual page for the product"
     },
     {
-        id:1,
+        id:"1",
         name:"Turtle Lamp",
-        description:"Small explanation detailing what this is for",
+        icon:"temp",
+        desc:"Description 2",
         videoLink :"Source of the learning video",
-        manualLink:"Source of the manual page for the product"
+    },
+    {
+        id:"2",
+        name:"Product name 3",
+        icon:"temp",
+        desc:"Description 3",
+        videoLink:"Source of the learning video"
     }
 ];

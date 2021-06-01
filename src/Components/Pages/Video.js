@@ -6,6 +6,8 @@ function Video(props) {
 
     let product = products[props.productId];
 
+    console.log(product);
+
     return(
         <>
             <Header className='headerting'>

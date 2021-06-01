@@ -1,57 +1,61 @@
-.manual-h-tag{
-  margin:auto;
-  text-align: center;
-  z-index: -1;
-}
-
-.image-div-holder{
-  position: relative;
-  width: auto;
-  height: auto;
-  margin: auto;
-  z-index: -1;
-
-  .image-div-parts{
-    width: 80%;
-    height:auto;
-    border: 2px solid black;
+.manuals {
+  h1, h3 {
     margin: auto;
-    margin-top: 20px;
-    margin-bottom:20px;
-    position: relative;
-
-    .manual-parts-img{
-      position: relative;
-      max-width: 80%;
-      margin: auto;
-    }
+    text-align: center;
+    z-index: -1;
   }
 
-  .image-div{
-    border: 2px solid black;
+  .image-div-holder {
     position: relative;
-    width:60%;
+    width: auto;
+    height: auto;
     margin: auto;
-    margin-bottom:20px;
+    z-index: -1;
 
-    .part-number{
-      position: absolute;
-      top:10px;
-      left:10px;
-    }
-    .guide-img{
-      position: absolute;
-      top:0;
-      right:0;
-      max-width: 20%;
-      border: 1px solid black;
-    }
-    .manual-img{
-      position: relative;
-      max-width:80%;
-      max-height: 500px;
+    .image-div-parts {
+      width: 80%;
       height: auto;
-      left:5%;
+      border: 2px solid black;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      position: relative;
+
+      .manual-parts-img {
+        position: relative;
+        max-width: 80%;
+        margin: auto;
+      }
+    }
+
+    .image-div {
+      border: 2px solid black;
+      position: relative;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 20px;
+
+      .part-number {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      .guide-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 20%;
+        border: 1px solid black;
+      }
+
+      .manual-img {
+        position: relative;
+        max-width: 80%;
+        max-height: 500px;
+        height: auto;
+        left: 5%;
+      }
     }
   }
 }

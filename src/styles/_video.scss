@@ -3,15 +3,14 @@
   overflow: hidden;
   padding-top: 56.25%;
   max-width: 1980px;
-  left:25%;
+  left:10%;
 }
 
-// Videoen ligger over headeren og jeg klarer ikke fikse det, noen hjelp
 .player {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   border: 0;
 }
