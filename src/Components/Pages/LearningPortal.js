@@ -7,8 +7,8 @@ function LearningPortal(props) {
   return (
     <>
       <Header>
-        <h1>Learning Portal</h1>
-        <p>Small explantation detaling what this is for</p>
+        <h1>Learn Bright!</h1>
+        <p>Here you can watch videos of our products or read our manuals</p>
       </Header>
       <div className='products'>
         {PRODUCTS.map((product) => (
