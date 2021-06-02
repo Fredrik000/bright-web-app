@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b722428d.chunk.css",
+    "main.js": "/static/js/main.1b5eda43.chunk.js",
+    "main.js.map": "/static/js/main.1b5eda43.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a3461964.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a3461964.js.map",
+    "static/js/2.92fc2b37.chunk.js": "/static/js/2.92fc2b37.chunk.js",
+    "static/js/2.92fc2b37.chunk.js.map": "/static/js/2.92fc2b37.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b722428d.chunk.css.map": "/static/css/main.b722428d.chunk.css.map",
+    "static/js/2.92fc2b37.chunk.js.LICENSE.txt": "/static/js/2.92fc2b37.chunk.js.LICENSE.txt",
+    "static/media/lamp-guide-hanging.0365c92f.png": "/static/media/lamp-guide-hanging.0365c92f.png",
+    "static/media/lamp-guide.2d61e102.png": "/static/media/lamp-guide.2d61e102.png",
+    "static/media/sunbell-inst-0.9d1a4840.png": "/static/media/sunbell-inst-0.9d1a4840.png",
+    "static/media/sunbell-inst-1.33ea7f76.png": "/static/media/sunbell-inst-1.33ea7f76.png",
+    "static/media/sunbell-inst-2.83423411.png": "/static/media/sunbell-inst-2.83423411.png",
+    "static/media/sunbell-inst-3.1ca882e5.png": "/static/media/sunbell-inst-3.1ca882e5.png",
+    "static/media/sunbell-inst-4.b2b78af6.png": "/static/media/sunbell-inst-4.b2b78af6.png",
+    "static/media/sunbell-inst-5.156702a0.png": "/static/media/sunbell-inst-5.156702a0.png",
+    "static/media/sunbell-inst-6.cdd84315.png": "/static/media/sunbell-inst-6.cdd84315.png",
+    "static/media/sunbell-inst-7.59832c68.png": "/static/media/sunbell-inst-7.59832c68.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3461964.js",
+    "static/js/2.92fc2b37.chunk.js",
+    "static/css/main.b722428d.chunk.css",
+    "static/js/main.1b5eda43.chunk.js"
+  ]
+}
