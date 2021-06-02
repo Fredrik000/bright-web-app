@@ -21,7 +21,7 @@ function Welcome(props) {
           <Card>
             <h1>Report repairs</h1>
             <img className={'cardImg'} src={LearningIcon} alt='report' />
-            <p>Here you can report the repairs you have done </p>
+            <p>Here you can report the repairs you have done</p>
             <Link to='/report'>
               <PrimaryBtn className='green'>Start</PrimaryBtn>
             </Link>
@@ -31,7 +31,7 @@ function Welcome(props) {
         <Card>
           <h1>Learning portal</h1>
           <img className={'cardImg'} src={VideoIcon} alt='videos' />
-          <p>Here you can learn about all our different products </p>
+          <p>Here you can learn about all our different products</p>
           <Link to='/learningportal'>
             <PrimaryBtn className='green'>Start</PrimaryBtn>
           </Link>
