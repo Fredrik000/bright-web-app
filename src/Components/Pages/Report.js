@@ -3,6 +3,9 @@ import AuthContext from '../../store/auth-context';
 import Form from 'Components/UI/Form';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
 import ReportReceipt from 'Components/ReportReceipt';
+import part1 from 'images/product-parts/part1.png';
+import part2 from 'images/product-parts/part2.png';
+import part3 from 'images/product-parts/part3.png';
 import { PRODUCTS } from 'Components/Objects/Products';
 
 function Report(props) {
@@ -122,21 +125,30 @@ function Report(props) {
             value='Part 1'
             onChange={checkboxChangeHandler}
           />
-          <label htmlFor='part1'>Part 1</label> <br />
+          <label htmlFor='part1'>
+            <img src={part1} alt='part1' />
+          </label>{' '}
+          <br />
           <input
             type='checkbox'
             id='part2'
             value='Part 2'
             onChange={checkboxChangeHandler}
           />
-          <label htmlFor='part2'>Part 2</label> <br />
+          <label htmlFor='part2'>
+            <img src={part2} alt='part2' />
+          </label>{' '}
+          <br />
           <input
             type='checkbox'
             id='part3'
             value='Part 3'
             onChange={checkboxChangeHandler}
           />
-          <label htmlFor='part3'>Part 3</label> <br />
+          <label htmlFor='part3'>
+            <img src={part3} alt='part3' />
+          </label>{' '}
+          <br />
         </div>
       </div>
 
