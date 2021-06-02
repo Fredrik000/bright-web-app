@@ -1,5 +1,5 @@
 import React, { useState, useRef, useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import AuthContext from '../../store/auth-context';
 import Form from 'Components/UI/Form';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
@@ -134,11 +134,9 @@ function Login(props) {
         <label htmlFor='password'>Password</label>
       </div>
       {!isLoading && (
-        <Link to='/report'>
-          <PrimaryBtn className='blue' type='submit' onClick={submitHandler}>
-            Login
-          </PrimaryBtn>
-        </Link>
+        <PrimaryBtn className='blue' type='submit'>
+          Login
+        </PrimaryBtn>
       )}
       {isLoading && <p>Sending request...</p>}
     </Form>
