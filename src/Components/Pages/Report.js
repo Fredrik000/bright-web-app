@@ -101,35 +101,44 @@ function Report(props) {
       <h1>Repair</h1>
       {content}
       <div>
+        <label className='report-form-label' htmlFor='product'>
+          Products
+        </label>
         <select id='product' ref={productInputRef}>
-          <option value='Product 1'>Product 1</option>
+          <option value='Sunbell 2.0'>Sunbell 2.0</option>
           <option value='Product 2'>Product 2</option>
           <option value='Product 3'>Product 3</option>
         </select>
       </div>
-      <div className={cbClass}>
-        <input
-          type='checkbox'
-          id='part1'
-          value='Part 1'
-          onChange={checkboxChangeHandler}
-        />
-        <label htmlFor='part1'>Part 1</label> <br />
-        <input
-          type='checkbox'
-          id='part2'
-          value='Part 2'
-          onChange={checkboxChangeHandler}
-        />
-        <label htmlFor='part2'>Part 2</label> <br />
-        <input
-          type='checkbox'
-          id='part3'
-          value='Part 3'
-          onChange={checkboxChangeHandler}
-        />
-        <label htmlFor='part3'>Part 3</label> <br />
+      <div>
+        <label className='report-form-label' htmlFor='parts'>
+          Parts
+        </label>
+        <div className={cbClass} id='parts'>
+          <input
+            type='checkbox'
+            id='part1'
+            value='Part 1'
+            onChange={checkboxChangeHandler}
+          />
+          <label htmlFor='part1'>Part 1</label> <br />
+          <input
+            type='checkbox'
+            id='part2'
+            value='Part 2'
+            onChange={checkboxChangeHandler}
+          />
+          <label htmlFor='part2'>Part 2</label> <br />
+          <input
+            type='checkbox'
+            id='part3'
+            value='Part 3'
+            onChange={checkboxChangeHandler}
+          />
+          <label htmlFor='part3'>Part 3</label> <br />
+        </div>
       </div>
+
       <div>
         <textarea
           type='textarea'

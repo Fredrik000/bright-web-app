@@ -31,16 +31,6 @@
     }
   }
 
-  .cb-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    label {
-      margin: 0 15px 0 5px;
-    }
-  }
-
   .form-group {
     margin-bottom: -1.5rem;
     input {
@@ -84,5 +74,22 @@
   select,
   textarea::placeholder {
     color: $primary-color;
+  }
+}
+
+.report {
+  .cb-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      margin: 0 15px 0 5px;
+    }
+  }
+
+  .report-form-label {
+    margin-left: 1rem;
+    font-size: 16px;
   }
 }
