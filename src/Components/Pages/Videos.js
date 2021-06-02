@@ -21,7 +21,6 @@ function Videos(props) {
         <p>{productVideo.desc}</p>
       </Header>
 
-
       <div className='video-player'>
         <iframe
           className='video-player'
@@ -32,7 +31,6 @@ function Videos(props) {
           allowFullScreen
         ></iframe>
       </div>
-
     </>
   );
 }

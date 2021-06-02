@@ -3,6 +3,7 @@ import AuthContext from '../../store/auth-context';
 import Form from 'Components/UI/Form';
 import PrimaryBtn from 'Components/UI/PrimaryBtn';
 import ReportReceipt from 'Components/ReportReceipt';
+import { PRODUCTS } from 'Components/Objects/Products';
 
 function Report(props) {
   const productInputRef = useRef();
@@ -105,9 +106,9 @@ function Report(props) {
           Products
         </label>
         <select id='product' ref={productInputRef}>
-          <option value='Sunbell 2.0'>Sunbell 2.0</option>
-          <option value='Product 2'>Product 2</option>
-          <option value='Product 3'>Product 3</option>
+          <option value={PRODUCTS[0].name}>{PRODUCTS[0].name}</option>
+          <option value={PRODUCTS[1].name}>{PRODUCTS[1].name}</option>
+          <option value={PRODUCTS[2].name}>{PRODUCTS[2].name}</option>
         </select>
       </div>
       <div>

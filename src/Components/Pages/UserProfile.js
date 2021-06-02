@@ -42,7 +42,6 @@ const UserProfile = () => {
           <input
             type='password'
             id='new-password'
-            minLength='7'
             placeholder='New Password'
             ref={newPasswordInputRef}
           />

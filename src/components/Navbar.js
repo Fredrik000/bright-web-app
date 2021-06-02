@@ -20,6 +20,9 @@ function Navbar() {
       </Link>
 
       <ul>
+        <li>
+          <NavLink to='/'>Home</NavLink>
+        </li>
         {!isLoggedIn && (
           <li>
             <NavLink to='/login'>Login</NavLink>

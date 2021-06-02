@@ -23,7 +23,7 @@ function Welcome(props) {
             <img className={'cardImg'} src={LearningIcon} alt='report' />
             <p>Here you can report the repairs you have done </p>
             <Link to='/report'>
-              <PrimaryBtn className='blue'>Start</PrimaryBtn>
+              <PrimaryBtn className='green'>Start</PrimaryBtn>
             </Link>
           </Card>
         )}
@@ -33,7 +33,7 @@ function Welcome(props) {
           <img className={'cardImg'} src={VideoIcon} alt='videos' />
           <p>Here you can learn about all our different products </p>
           <Link to='/learningportal'>
-            <PrimaryBtn className='blue'>Start</PrimaryBtn>
+            <PrimaryBtn className='green'>Start</PrimaryBtn>
           </Link>
         </Card>
       </div>

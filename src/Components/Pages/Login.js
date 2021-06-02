@@ -134,7 +134,7 @@ function Login(props) {
         <label htmlFor='password'>Password</label>
       </div>
       {!isLoading && (
-        <PrimaryBtn className='blue' type='submit'>
+        <PrimaryBtn className='green' type='submit'>
           Login
         </PrimaryBtn>
       )}

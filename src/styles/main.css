@@ -329,8 +329,8 @@
   gap: 1rem;
 }
 
-.products .card img {
-  margin-top: 0.625rem;
+.products .card p {
+  margin-bottom: 1rem;
 }
 
 .products .card button {
@@ -421,7 +421,7 @@
   display: -ms-grid;
   display: grid;
   place-items: center;
-  min-height: 100%;
+  min-height: 60vh;
 }
 
 .video-player iframe {
