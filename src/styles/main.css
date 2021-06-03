@@ -333,6 +333,10 @@
   margin-bottom: 1rem;
 }
 
+.products .card img {
+  width: 100%;
+}
+
 .products .card button {
   border-radius: 0;
 }
